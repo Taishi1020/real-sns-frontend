@@ -1,3 +1,6 @@
+import {Chat, Notifications, Search} from "@mui/icons-material";
+
+
 export const Topeber = () => {
     return (
         <dev className="topbarContainer">
@@ -6,6 +9,7 @@ export const Topeber = () => {
             </div>
             <div className="topbarCenter">
                 <div className="serarchbar">
+                    <Search className="searchIcon"/>
                     <input
                         type="text"
                         className="serchInput"
@@ -14,8 +18,16 @@ export const Topeber = () => {
                 </div>
             </div>
             <div className="topbarRight">
-                <div className="topbarIconItem">1</div>
-                <div className="topbarIconItem">2</div>
+                <div className="topbarIconItem">
+                    <Chat/>
+                    1
+                    <span className="topbarIconBage"></span>
+                </div>
+                <div className="topbarIconItem">
+                    <Notifications/>
+                    2
+                    <span className="topbarIconBage"></span>
+                </div>
             </div>
             <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
         </dev>

@@ -36,6 +36,11 @@
     margin-right: 5px;
 }
 
+.serchInput {
+    border: none; /*Inptの枠を取り除く設定*/
+    width: 80%;
+}
+
 .topbarCenter {
     flex: 5
 }

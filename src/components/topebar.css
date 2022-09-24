@@ -8,3 +8,24 @@
     top: 0;
     z-index: 100;
 }
+
+.topbarLeft {
+    flex: 3
+}
+
+/*RealSNSの文字調節*/
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+
+.topbarCenter {
+    flex: 5
+}
+
+.topbarRight {
+    flex: 4
+}

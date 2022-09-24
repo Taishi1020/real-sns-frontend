@@ -40,6 +40,9 @@
     border: none; /*Inptの枠を取り除く設定*/
     width: 80%;
 }
+.serchInput:focus{ /*マウスでフォーカスしたしもserchInputの余白を出現させない設定*/
+    outline: none;
+}
 
 .topbarCenter {
     flex: 5

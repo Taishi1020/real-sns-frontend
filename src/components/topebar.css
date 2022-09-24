@@ -1,0 +1,10 @@
+.topbarContainer {
+    background-color: #2c517c;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: sticky; /*上部に常に固定することができるプロパティ*/
+    top: 0;
+    z-index: 100;
+}

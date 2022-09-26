@@ -18,18 +18,19 @@ export const Topeber = () => {
                 </div>
             </div>
             <div className="topbarRight">
-                <div className="topbarIconItem">
-                    <Chat/>
-                    1
-                    <span className="topbarIconBage"></span>
-                </div>
-                <div className="topbarIconItem">
-                    <Notifications/>
-                    2
-                    <span className="topbarIconBage"></span>
+                <div className="topbarIconItems">
+                    <div className="topbarIconItem">
+                        <Chat/>
+                        <span className="topbarIconBage">1</span>
+                    </div>
+                    <div className="topbarIconItem">
+                        <Notifications/>
+                        <span className="topbarIconBage">2</span>
+                    </div>
+                        <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
                 </div>
             </div>
-            <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
+
         </dev>
     )
 }

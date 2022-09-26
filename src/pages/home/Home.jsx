@@ -10,8 +10,8 @@ export const Home = () => {
             <Topeber/>
             <div className="homeContainer">
                 <Sidebar />
-                {/*<TimeLine/>*/}
-                {/*<Rightbar/>*/}
+                <TimeLine/>
+                <Rightbar/>
             </div>
         </>
     )

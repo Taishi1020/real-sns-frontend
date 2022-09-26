@@ -36,6 +36,16 @@ export const Sidebar = () => {
                     </li>
                 </ul>
                 <hr className="sidebarHr"/>
+                <ul>
+                    <li className="sidebarFriend">
+                        <img
+                            src="/assets/person/2.jpeg"
+                            alt=""
+                            className="sidebarFriendImg"
+                        />
+                        <span className="sidebarFrinedName">Shin Code</span>
+                    </li>
+                </ul>
             </div>
         </div>
     )

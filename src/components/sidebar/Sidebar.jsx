@@ -1,5 +1,5 @@
 import {Bookmark, Home, MessageRounded, Notifications, Person, Search, Settings} from "@mui/icons-material";
-
+import "./sidbar.css"
 
 export const Sidebar = () => {
     return (
@@ -43,8 +43,8 @@ export const Sidebar = () => {
                             alt=""
                             className="sidebarFriendImg"
                         />
-                        <span className="sidebarFrinedName">Shin Code</span>
                     </li>
+                        <span className="sidebarFrinedName">Shin Code</span>
                 </ul>
             </div>
         </div>

@@ -30,7 +30,6 @@ export const Topeber = () => {
                         <img src="/assets/person/1.jpeg" alt="" className="topbarImg"/>
                 </div>
             </div>
-
         </dev>
     )
 }

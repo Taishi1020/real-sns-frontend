@@ -29,6 +29,25 @@ export const Rightbar = () => {
                         <span className="rightbarusername">Tanka</span>
                     </li>
                 </ul>
+                <p className="promotionTitle">プロモーション広告</p>
+                <img
+                    src="/assets/promotion/promotion1.jpeg"
+                    alt=""
+                    className="rightbarPromotionImg"
+                />
+                <p className="promotionName">ショッピング</p>
+                <img
+                    src="/assets/promotion/promotion2.jpeg"
+                    alt=""
+                    className="rightbarPromotionImg"
+                />
+                <p className="promotionName">カーショッピング</p>
+                <img
+                    src="/assets/promotion/promotion3.jpeg"
+                    alt=""
+                    className="rightbarPromotionImg"
+                />
+                <p className="promotionName">Taishi Code株式会社</p>
             </div>
         </div>
     )

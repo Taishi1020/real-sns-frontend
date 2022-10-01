@@ -3,7 +3,6 @@ import {MoreVert} from "@mui/icons-material";
 import {Users} from "../../DummyData";
 import {useState} from "react";
 
-
 export const Post = ({post}) => {
     const [like, setLike] = useState(0);
     const hartButton = () => {

@@ -1,5 +1,7 @@
 import {Bookmark, Home, MessageRounded, Notifications, Person, Search, Settings} from "@mui/icons-material";
 import "./sidbar.css"
+import {OnlinePicUpFriend} from "../Online/OnlinePicUpFriend";
+import {Users} from "../../DummyData";
 
 export const Sidebar = () => {
     return (
@@ -36,32 +38,9 @@ export const Sidebar = () => {
                     </li>
                 </ul>
                 <hr className="sidebarHr"/>
-                <ul className="sidebarFriendList">
-                    <li className="sidebarFriend">
-                        <img
-                            src="/assets/person/2.jpeg"
-                            alt=""
-                            className="sidebarFriendImg"
-                        />
-                        <span className="sidebarFrinedName">ShinCode</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img
-                            src="/assets/person/3.jpeg"
-                            alt=""
-                            className="sidebarFriendImg"
-                        />
-                        <span className="sidebarFrinedName">Tanaka</span>
-                    </li>
-                    <li className="sidebarFriend">
-                        <img
-                            src="/assets/person/4.jpeg"
-                            alt=""
-                            className="sidebarFriendImg"
-                        />
-                        <span className="sidebarFrinedName">satou</span>
-                    </li>
-                </ul>
+                {Users.map((user) => (
+                    <OnlinePicUpFriend user={user} key={user.id}/>
+                ))}
             </div>
         </div>
     )

@@ -1,5 +1,7 @@
 import React from "react"
 import "./rightbar.css"
+import Online from "../Online/Online";
+import {Users} from "../../DummyData";
 
 export const Rightbar = () => {
     return (
@@ -14,6 +16,9 @@ export const Rightbar = () => {
                 <img src="/assets/ad.jpeg" alt="" className="eventImg"/>
                 <h4 className="rightbarTitle">オンラインの友達</h4>
                 <ul className="rightbarFriendList">
+                    {Users.map((user) => (
+                        <Online user={user} key={user.id}/>
+                    ))}
                     <li className="rightbarFriend">
                         <div className="rightbarProfileImgContainer">
                             <img src="/assets/person/1.jpeg" alt="" className="rightbarProfileImg"/>

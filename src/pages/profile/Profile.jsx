@@ -23,7 +23,7 @@ export const Profile = () => {
                     </div>
                     <div className="profileRightBottom">
                         <TimeLine/>
-                        <Rightbar/>
+                        <Rightbar profile/>
                     </div>
                 </div>
             </div>

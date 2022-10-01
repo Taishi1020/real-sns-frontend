@@ -111,6 +111,8 @@
 
 .rightbarFollowings {
     display: flex;
+    /*レスポンシブ設定↓*/
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 

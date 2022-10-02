@@ -24,7 +24,7 @@ export const Post = ({post}) => {
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img src={user.profilePicture} alt="" className="postProfileImg"/>
+                        <img src={user.profilePicture || PUBLIC_FOLDER + "/person/noAvatar.png"} alt="" className="postProfileImg"/>
                         <span className="postUsername">{user.username}</span>
                         <span className="postDate">{post.data}</span>
                     </div>

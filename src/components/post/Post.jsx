@@ -1,11 +1,21 @@
 import "./post.css"
 import {MoreVert} from "@mui/icons-material";
-import {Users} from "../../DummyData";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 export const Post = ({post}) => {
     const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
     const [like, setLike] = useState(0);
+    const [user, setUser] = useState([]);
+
+    useEffect(() => {
+        const fetchUser = async () => {
+            const response = await axios.get(`/users/${post.userId}`)
+            setUser(response.data)
+        };
+        fetchUser();
+    }, [])
+
     const hartButton = () => {
         setLike(like + 1)
     }
@@ -14,8 +24,8 @@ export const Post = ({post}) => {
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img src={PUBLIC_FOLDER + Users.filter((user) => user.id === post.id)[0].profilePicture} alt="" className="postProfileImg"/>
-                        <span className="postUsername">{Users.filter((user) => user.id === post.id)[0].username}</span>
+                        <img src={user.profilePicture} alt="" className="postProfileImg"/>
+                        <span className="postUsername">{user.username}</span>
                         <span className="postDate">{post.data}</span>
                     </div>
                 <div className="postTopRight">

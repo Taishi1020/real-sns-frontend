@@ -5,6 +5,7 @@ import {Rightbar} from "../../components/rightbar/Rightbar";
 import "./Profile.css"
 
 export const Profile = () => {
+    const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
     return (
         <>
             <Topeber/>
@@ -13,8 +14,8 @@ export const Profile = () => {
                 <div className="profileRight">
                     <div className="profileRightTop">
                         <div className="profileRightCover">
-                            <img src="/assets/post/3.jpeg" alt="" className="profileCoverImg"/>
-                            <img src="/assets/person/5.jpeg" alt="" className="profileUserImg"/>
+                            <img src= {PUBLIC_FOLDER + "/post/3.jpeg"} alt="" className="profileCoverImg"/>
+                            <img src={PUBLIC_FOLDER + "/person/5.jpeg"} alt="" className="profileUserImg"/>
                         </div>
                         <div className="profileInfo">
                             <h4 className="profileInfoName">Taishi</h4>

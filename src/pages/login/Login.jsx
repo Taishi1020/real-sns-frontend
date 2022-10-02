@@ -10,7 +10,7 @@ export const Login = () => {
                 </div>
                 <div className="loginRight">
                     <div className="loginBox">
-                        <p className="">ログインはこちら</p>
+                        <p className="loginMsg">ログインはこちら</p>
                         <input type="text" className="loginInput" placeholder="Eメール"/>
                         <input type="text" className="loginInput" placeholder="パスワード"/>
                         <button className="loginButton">ログイン</button>

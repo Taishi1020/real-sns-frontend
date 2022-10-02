@@ -2,6 +2,7 @@ import {Bookmark, Home, MessageRounded, Notifications, Person, Search, Settings}
 import "./sidbar.css"
 import {OnlinePicUpFriend} from "../Online/OnlinePicUpFriend";
 import {Users} from "../../DummyData";
+import {Link} from "react-router-dom";
 
 export const Sidebar = () => {
     return (
@@ -10,7 +11,9 @@ export const Sidebar = () => {
                 <ul className="sidebarList">
                     <li className="sidebarListItem">
                         <Home className="sidebarIcon"/>
-                        <span className="sidarListItemText">ホーム</span>
+                        <Link to="/" style={{textDecoration: "none", color: "black"}}>
+                            <span className="sidarListItemText">ホーム</span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <Search className="sidebarIcon"/>
@@ -30,7 +33,9 @@ export const Sidebar = () => {
                     </li>
                     <li className="sidebarListItem">
                         <Person className="sidebarIcon"/>
-                        <span className="sidarListItemText">プロフィール</span>
+                        <Link to="/profile/Taishi" style={{textDecoration: "none", color: "black"}}>
+                            <span className="sidarListItemText">プロフィール</span>
+                        </Link>
                     </li>
                     <li className="sidebarListItem">
                         <Settings className="sidebarIcon"/>

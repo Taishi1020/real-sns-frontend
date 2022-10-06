@@ -5,11 +5,13 @@ import axios from "axios";
 import {Post} from "../post/Post";
 
 export const TimeLine = () => {
+    //状態管理
     const [posts, setPosts] = useState([]);
+
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await axios.get("/posts/timeline/632bbd6d58346bcee5b44edb")
+            const response = await axios.get("/posts/timeline/633915134470348694751aac")
             setPosts(response.data)
         };
         fetchPosts();

@@ -23,7 +23,7 @@ export const Profile = () => {
                         </div>
                     </div>
                     <div className="profileRightBottom">
-                        <TimeLine username="Taishi"/>
+                        <TimeLine username="Tanaka"/>
                         <Rightbar profile/>
                     </div>
                 </div>

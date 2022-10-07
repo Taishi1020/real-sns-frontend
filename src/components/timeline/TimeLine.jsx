@@ -11,8 +11,9 @@ export const TimeLine = ({username}) => {
     useEffect(() => {
         const fetchPosts = async () => {
             const response = username
-                ? something
+                ? await axios.get(`/posts/profile/${username}`)
                 : await axios.get("/posts/timeline/633915134470348694751aac")
+            console.log(response)
             setPosts(response.data)
         };
         fetchPosts();

@@ -13,7 +13,6 @@ export const TimeLine = ({username}) => {
             const response = username
                 ? await axios.get(`/posts/profile/${username}`)
                 : await axios.get("/posts/timeline/633915134470348694751aac")
-            console.log(response)
             setPosts(response.data)
         };
         fetchPosts();
@@ -23,7 +22,7 @@ export const TimeLine = ({username}) => {
         <div className="TimeLine">
             <div className="timelineWrapper">
                 <Share/>
-                {posts.map((post) => (<Post post={post} key={post.id}/>))}
+                {posts.map((post) => (<Post post={post} key={post._id}/>))}
             </div>
         </div>
     );

@@ -2,11 +2,12 @@ import "./rightbar.css"
 import Online from "../Online/Online";
 import {Users} from "../../DummyData";
 
-export const Rightbar = ({profile}) => {
+export const Rightbar = ({user}) => {
 
     const HomeRightbar = () => {
         return (
             <>
+
                 <div className="eventContainer">
                     <img src="/assets/star.png" alt="" className="starImg"/>
                     <span className="eventText">
@@ -98,7 +99,7 @@ export const Rightbar = ({profile}) => {
     return (
         <div className="rightbar">
             <div className="rightbarWrapper">
-                {profile ? <ProfileRightbar/> : <HomeRightbar/>}
+                {user ? <ProfileRightbar/> : <HomeRightbar/>}
             </div>
         </div>
     )

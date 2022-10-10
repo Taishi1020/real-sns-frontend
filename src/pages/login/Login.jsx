@@ -1,14 +1,24 @@
 import "./Login.css"
-import {useRef} from 'react'
+import {useContext,useRef} from 'react'
+import {loginCall} from '../../actionCalls'
+import {AuthContext} from '../../state/AuthContext'
 
 export const Login = () => {
     const email = useRef();
     const password = useRef();
+    const {user, isFetching, error, dispatch} = useContext(AuthContext);
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(email.current.value);
-        console.log(password.current.value);
+        // console.log(email.current.value);
+        // console.log(password.current.value);
+        loginCall({
+                email: email.current.value,
+                password: password.current.value,
+            },
+            dispatch
+        )
     }
 
     return (
@@ -19,7 +29,7 @@ export const Login = () => {
                     <span className="loginDesc">本格的なSNSを、自分の手で</span>
                 </div>
                 <div className="loginRight">
-                    <form  className="loginBox" onSubmit={(e) =>  handleSubmit(e)}>
+                    <form className="loginBox" onSubmit={(e) => handleSubmit(e)}>
                         <p className="loginMsg">ログインはこちら</p>
                         <input
                             type="email"

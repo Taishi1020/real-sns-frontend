@@ -12,17 +12,17 @@ const initalState = {
 export const AuthContext = createContext(initalState);
 
 export const AuthContextProvider = ({children}) => {
-    const [state, disPatch] = useReducer(AuthReducer, initalState);
-    return(
+    const [state, dispatch] = useReducer(AuthReducer, initalState);
+    return (
         <AuthContext.Provider value={{
             user: state.user,
             isFetching: state.isFetching,
             error: state.error,
-            disPatch,
+            dispatch,
         }}
         >
             {children}
         </AuthContext.Provider>
-        )
+    )
 }
 

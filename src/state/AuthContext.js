@@ -11,7 +11,18 @@ const initalState = {
 //状態をグローバルに管理する
 export const AuthContext = createContext(initalState);
 
-export const AutchContextProvider = () =>{
-    const [state, disPatch] = useReducer(AuthReducer,initalState);
+export const AuthContextProvider = ({children}) => {
+    const [state, disPatch] = useReducer(AuthReducer, initalState);
+    return(
+        <AuthContext.Provider value={{
+            user: state.user,
+            isFetching: state.isFetching,
+            error: state.error,
+            disPatch,
+        }}
+        >
+            {children}
+        </AuthContext.Provider>
+        )
 }
 

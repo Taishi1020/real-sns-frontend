@@ -2,6 +2,7 @@ import "./Register.css"
 import {loginCall} from '../../actionCalls'
 import {useRef} from 'react'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 
 export const Register = () => {
@@ -9,6 +10,7 @@ export const Register = () => {
     const email = useRef();
     const password = useRef();
     const passwordConfirmation = useRef();
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -25,6 +27,7 @@ export const Register = () => {
                     password: password.current.value,
                 };
                 await axios.post("auth/register", user)
+                navigate("/login")
             }catch (err){
                 console.log(err)
             }

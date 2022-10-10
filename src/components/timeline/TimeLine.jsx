@@ -16,7 +16,7 @@ export const TimeLine = ({username}) => {
             setPosts(response.data)
         };
         fetchPosts();
-    }, [])
+    }, [username])
 
     return (
         <div className="TimeLine">

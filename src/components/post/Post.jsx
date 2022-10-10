@@ -3,6 +3,7 @@ import {MoreVert} from "@mui/icons-material";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import {format} from "timeago.js"
+import {Link} from 'react-router-dom'
 
 
 export const Post = ({post}) => {
@@ -16,7 +17,7 @@ export const Post = ({post}) => {
             setUser(response.data)
         };
         fetchUser();
-    }, [])
+    }, [post.userId])
 
     const hartButton = () => {
         setLike(like + 1)
@@ -27,8 +28,13 @@ export const Post = ({post}) => {
             <div className="postWrapper">
                 <div className="postTop">
                     <div className="postTopLeft">
-                        <img src={user.profilePicture || PUBLIC_FOLDER + "/person/noAvatar.png"} alt=""
-                             className="postProfileImg"/>
+                        <Link to={`/profile/${user.username}`}>
+                            <img
+                                src={user.profilePicture || PUBLIC_FOLDER + "/person/noAvatar.png"}
+                                alt=""
+                                className="postProfileImg"
+                            />
+                        </Link>
                         <span className="postUsername">{user.username}</span>
                         <span className="postDate">{format(post.createdAt)}</span>
                     </div>

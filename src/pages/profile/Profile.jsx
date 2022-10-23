@@ -32,12 +32,18 @@ export const Profile = () => {
                     <div className="profileRightTop">
                         <div className="profileRightCover">
                             <img
-                                src={ user.coverPicture || PUBLIC_FOLDER + "/post/3.jpeg"}
+                                src={
+                                    PUBLIC_FOLDER + user.coverPicture ||
+                                    PUBLIC_FOLDER + "/post/3.jpeg"
+                                }
                                 alt=""
                                 className="profileCoverImg"
                             />
                             <img
-                                src={user.coverPicture || PUBLIC_FOLDER + "/person/noAvatar.png"}
+                                src={
+                                    PUBLIC_FOLDER + user.coverPicture ||
+                                    PUBLIC_FOLDER + "/person/noAvatar.png"
+                                }
                                 alt=""
                                 className="profileUserImg"/>
                         </div>

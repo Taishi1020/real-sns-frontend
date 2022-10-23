@@ -9,7 +9,7 @@ const initalState = {
         username: "Taishi",
         email: "Taishi@gmail.com",
         password: "Taishi1999",
-        profilePicture: "",
+        profilePicture: "/person/1.jpeg",
         coverPicture: "",
         followers: [],
         followings: [],

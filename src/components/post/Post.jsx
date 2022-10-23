@@ -37,7 +37,6 @@ export const Post = ({post}) => {
                         <Link to={`/profile/${user.username}`}>
                             <img
                                 src={
-                                // PUBLIC_FOLDER + "/post/3.jpeg"
                                     user.profilePicture
                                         ? PUBLIC_FOLDER + user.profilePicture
                                         : PUBLIC_FOLDER + "/person/noAvatar.png"

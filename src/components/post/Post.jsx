@@ -1,15 +1,17 @@
 import "./post.css"
 import {MoreVert} from "@mui/icons-material";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import axios from "axios";
 import {format} from "timeago.js"
 import {Link} from 'react-router-dom'
-
+import {AuthContext} from '../../state/AuthContext'
 
 export const Post = ({post}) => {
     const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
     const [like, setLike] = useState(post.likes.length);
-    const [user, setUser] = useState({});
+   const [user, setUser] = useState({});
+
+   const {user: currentUser} = useContext(AuthContext)
 
     useEffect(() => {
         const fetchUser = async () => {
@@ -19,8 +21,12 @@ export const Post = ({post}) => {
         fetchUser();
     }, [post.userId])
 
-    const hartButton = () => {
-        setLike(like + 1)
+    const hartButton = async() => {
+        try {
+            await axios.put(`/posts/${post._id}/like`,{userId: currentUser._id})
+        }catch(e){
+            console.log(e)
+        }
     }
 
     return (
@@ -31,6 +37,7 @@ export const Post = ({post}) => {
                         <Link to={`/profile/${user.username}`}>
                             <img
                                 src={
+                                // PUBLIC_FOLDER + "/post/3.jpeg"
                                     user.profilePicture
                                         ? PUBLIC_FOLDER + user.profilePicture
                                         : PUBLIC_FOLDER + "/person/noAvatar.png"

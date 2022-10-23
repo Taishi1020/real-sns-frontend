@@ -30,13 +30,14 @@ export const Share = () => {
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
-                    <img
-                        src={
-                            user.profilePicture
-                                ? PUBLIC_FOLDER + user.profilePicture
-                                : PUBLIC_FOLDER + "/person/noAvatar.png"
-                        }
-                    />
+                    {/*<img*/}
+                    {/*    src={*/}
+                    {/*        user.profilePicture*/}
+                    {/*            ? PUBLIC_FOLDER + user.profilePicture*/}
+                    {/*            : PUBLIC_FOLDER + "/person/noAvatar.png"*/}
+                    {/*    }*/}
+                    {/*    className="ShareIcon"*/}
+                    {/*/>*/}
                     <input
                         type="text"
                         className="shareInput"

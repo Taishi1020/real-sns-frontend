@@ -58,7 +58,7 @@ export const Post = ({post}) => {
                 </div>
                 <div className="postBottom">
                     <div className="postBottomLeft">
-                        <img src="/assets/heart.png" alt="" className="likeIcon" onClick={hartButton}/>
+                        <img src="/heart.png" alt="" className="likeIcon" onClick={hartButton}/>
                         <span className="postLikeCounter">{post.like}人がいいねを押しました</span>
                     </div>
                     <div className="postBottomRight">

@@ -9,12 +9,12 @@ export const Rightbar = ({user}) => {
             <>
 
                 <div className="eventContainer">
-                    <img src="/assets/star.png" alt="" className="starImg"/>
+                    <img src="/star.png" alt="" className="starImg"/>
                     <span className="eventText">
                         <b>フォロワー限定</b>イベント開催中
                     </span>
                 </div>
-                <img src="/assets/ad.jpeg" alt="" className="eventImg"/>
+                <img src="/ad.jpeg" alt="" className="eventImg"/>
                 <h4 className="rightbarTitle">オンラインの友達</h4>
                 <ul className="rightbarFriendList">
                     {Users.map((user) => (
@@ -22,14 +22,14 @@ export const Rightbar = ({user}) => {
                     ))}
                     <li className="rightbarFriend">
                         <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/1.jpeg" alt="" className="rightbarProfileImg"/>
+                            <img src="/person/1.jpeg" alt="" className="rightbarProfileImg"/>
                             <span className="rightbarOnline"></span>
                         </div>
                         <span className="rightbarUsername">Taishi</span>
                     </li>
                     <li className="rightbarFriend">
                         <div className="rightbarProfileImgContainer">
-                            <img src="/assets/person/2.jpeg" alt="" className="rightbarProfileImg"/>
+                            <img src="/person/2.jpeg" alt="" className="rightbarProfileImg"/>
                             <span className="rightbarOnline"></span>
                         </div>
                         <span className="rightbarusername">Tanka</span>
@@ -37,19 +37,19 @@ export const Rightbar = ({user}) => {
                 </ul>
                 <p className="promotionTitle">プロモーション広告</p>
                 <img
-                    src="/assets/promotion/promotion1.jpeg"
+                    src="/promotion/promotion1.jpeg"
                     alt=""
                     className="rightbarPromotionImg"
                 />
                 <p className="promotionName">ショッピング</p>
                 <img
-                    src="/assets/promotion/promotion2.jpeg"
+                    src="/promotion/promotion2.jpeg"
                     alt=""
                     className="rightbarPromotionImg"
                 />
                 <p className="promotionName">カーショッピング</p>
                 <img
-                    src="/assets/promotion/promotion3.jpeg"
+                    src="/promotion/promotion3.jpeg"
                     alt=""
                     className="rightbarPromotionImg"
                 />
@@ -71,23 +71,23 @@ export const Rightbar = ({user}) => {
                     <h4 className="rightbarTitle2">あなたの友達</h4>
                     <div className="rightbarFollowings">
                         <div className="rightbarFollowing">
-                            <img src="/assets/person/1.jpeg" alt="" className="rightbarFollowingImg"/>
+                            <img src="/person/1.jpeg" alt="" className="rightbarFollowingImg"/>
                             <span className="rightbarFollowingName">Taishi</span>
                         </div>
                         <div className="rightbarFollowing">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarFollowingImg"/>
+                            <img src="/person/3.jpeg" alt="" className="rightbarFollowingImg"/>
                             <span className="rightbarFollowingName">Koushi</span>
                         </div>
                         <div className="rightbarFollowing">
-                            <img src="/assets/person/2.jpeg" alt="" className="rightbarFollowingImg"/>
+                            <img src="/person/2.jpeg" alt="" className="rightbarFollowingImg"/>
                             <span className="rightbarFollowingName">Yuito</span>
                         </div>
                         <div className="rightbarFollowing">
-                            <img src="/assets/person/4.jpeg" alt="" className="rightbarFollowingImg"/>
+                            <img src="/person/4.jpeg" alt="" className="rightbarFollowingImg"/>
                             <span className="rightbarFollowingName">Ryouta</span>
                         </div>
                         <div className="rightbarFollowing">
-                            <img src="/assets/person/5.jpeg" alt="" className="rightbarFollowingImg"/>
+                            <img src="/person/5.jpeg" alt="" className="rightbarFollowingImg"/>
                             <span className="rightbarFollowingName">Keiithirou</span>
                         </div>
                     </div>

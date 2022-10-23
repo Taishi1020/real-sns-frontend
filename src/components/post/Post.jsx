@@ -9,9 +9,9 @@ import {AuthContext} from '../../state/AuthContext'
 export const Post = ({post}) => {
     const PUBLIC_FOLDER = process.env.REACT_APP_PUBLIC_FOLDER
     const [like, setLike] = useState(post.likes.length);
-   const [user, setUser] = useState({});
+    const [user, setUser] = useState({});
 
-   const {user: currentUser} = useContext(AuthContext)
+    const {user: currentUser} = useContext(AuthContext)
 
     useEffect(() => {
         const fetchUser = async () => {

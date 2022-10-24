@@ -43,14 +43,14 @@ export const Share = () => {
         <div className="share">
             <div className="shareWrapper">
                 <div className="shareTop">
-                    {/*<img*/}
-                    {/*    src={*/}
-                    {/*        user.profilePicture*/}
-                    {/*            ? PUBLIC_FOLDER + user.profilePicture*/}
-                    {/*            : PUBLIC_FOLDER + "/person/noAvatar.png"*/}
-                    {/*    }*/}
-                    {/*    className="ShareIcon"*/}
-                    {/*/>*/}
+                    <img
+                        src={
+                            user.profilePicture
+                                ? PUBLIC_FOLDER + user.profilePicture
+                                : PUBLIC_FOLDER + "/person/noAvatar.png"
+                        }
+                        className="ShareIcon"
+                    />
                     <input
                         type="text"
                         className="shareInput"
@@ -59,7 +59,7 @@ export const Share = () => {
                     />
                 </div>
                 <hr className="shareHr"/>
-                <form className="shareButtons" onSubmit={(e) => handleSubmit(e)}>
+                <form className="shareButtons" onSubmit={(e) => handleSubmit(e.target.value)}>
                     <div className="shareOptions">
                         <label className="shareOption" htmlFor="file">
                             <Image className="shareIcon" htmlColor="blue"/>
